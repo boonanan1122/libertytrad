@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Testimonials() {
   return (
-    <section className="testimonials">
+    <section className="testimonials section">   {/* ✅ ใส่ section utility */}
       <div className="container testimonials-container">
         <h2 className="section-title">เสียงจากลูกค้า</h2>
         <div className="testimonials-grid">

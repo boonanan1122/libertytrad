@@ -1,4 +1,5 @@
 /* ================= RESET & FONT ================== */
+/* [GLOBAL / _app + all pages]  DO NOT EDIT BELOW THIS LINE */
 html, body {
     box-sizing: border-box;
     margin: 0;
@@ -11,6 +12,7 @@ html, body {
 }
 
 /* Global Container Utility */
+/* [GLOBAL Utility / used by all components]  DO NOT EDIT BELOW THIS LINE */
 .container {
     max-width: 1400px;
     margin-left: auto;
@@ -20,6 +22,7 @@ html, body {
 }
 
 /* Floating Animation Background */
+/* [Home only / BackgroundDecor.tsx]  DO NOT EDIT BELOW THIS LINE */
 .floating-bg {
     position: fixed;
     top: 0;
@@ -62,6 +65,7 @@ html, body {
 }
 
 /* ================= HEADER ================== */
+/* [Layout / Header.tsx]  DO NOT EDIT BELOW THIS LINE */
 .header {
     position: sticky;
     top: 0;
@@ -105,6 +109,7 @@ html, body {
 }
 
 /* ================= HEADER ACTIONS ================ */
+/* [Layout / Header.tsx → search/cart area]  DO NOT EDIT BELOW THIS LINE */
 .header-actions {
     display: flex;
     align-items: center;
@@ -164,6 +169,7 @@ html, body {
 }
 
 /* ================= HERO SECTION ================== */
+/* [Home / Hero.tsx]  DO NOT EDIT BELOW THIS LINE */
 .hero {
     position: relative;
     z-index: 10;
@@ -235,6 +241,7 @@ html, body {
 }
 
 /* ================= PRODUCT FILTER ================== */
+/* [Home / ProductFilter.tsx]  DO NOT EDIT BELOW THIS LINE */
 .product-filter {
     position: relative;
     z-index: 10;
@@ -291,6 +298,7 @@ html, body {
 }
 
 /* ================= FEATURED PRODUCTS =============== */
+/* [Home / FeaturedProducts.tsx]  DO NOT EDIT BELOW THIS LINE */
 .featured-products {
     position: relative;
     z-index: 10;
@@ -374,6 +382,7 @@ html, body {
 }
 
 /* ================= PRODUCT CATEGORIES =============== */
+/* [Home / Categories.tsx]  DO NOT EDIT BELOW THIS LINE */
 .categories {
     position: relative;
     z-index: 10;
@@ -426,6 +435,7 @@ html, body {
 }
 
 /* ================= FOOTER ================== */
+/* [Layout / Footer.tsx]  DO NOT EDIT BELOW THIS LINE */
 .footer {
     position: relative;
     z-index: 10;
@@ -493,6 +503,7 @@ html, body {
 }
 
 /* Responsive Design */
+/* [GLOBAL responsive]  DO NOT EDIT BELOW THIS LINE */
 @media (max-width: 768px) {
     .container {
         padding-left: 1rem;
@@ -526,7 +537,8 @@ html, body {
     }
 }
 
-
+/* ================= TRUST SECTION ================== */
+/* [Home / TrustSection.tsx]  DO NOT EDIT BELOW THIS LINE */
 .trust-section {
     position: relative;
     z-index: 10;
@@ -562,6 +574,8 @@ html, body {
     font-size: 0.9rem;
 }
 
+/* ================= MOBILE SERVICE ================== */
+/* [Services / components/MobileService.js]  DO NOT EDIT BELOW THIS LINE */
 .mobile-service {
     position: relative;
     z-index: 10;
@@ -615,4 +629,61 @@ html, body {
 .step-description {
     color: #94a3b8;
     line-height: 1.6;
+}
+
+/* ================= TESTIMONIALS ================== */
+/* [Home / components/Testimonials.tsx]  DO NOT EDIT BELOW THIS LINE */
+.testimonials {
+    padding: 4rem 2rem;                 /* กันไม่ให้ชิดขอบรอบ ๆ section */
+}
+
+.testimonials-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;                     /* จัดกึ่งกลาง */
+    padding: 0 1rem;                    /* กันชนซ้าย-ขวาเพิ่มอีกชั้น */
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: clamp(1rem, 2.5vw, 2rem);      /* ระยะห่างการ์ดปรับตามจอ */
+}
+
+.testimonial-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(249, 115, 22, 0.1);
+    border-radius: 16px;
+    padding: 2rem;                      /* พื้นที่ภายในการ์ดให้โปร่ง */
+    backdrop-filter: blur(10px);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(249, 115, 22, 0.3);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.12);
+}
+
+.testimonial-rating {
+    font-size: 1.1rem;
+    margin-bottom: .75rem;
+}
+
+.testimonial-text {
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author {
+    color: #e2e8f0;
+    font-weight: 600;
+    opacity: .9;
+}
+
+/* (Responsive) ทำให้อ่านง่ายขึ้นบนจอเล็ก */
+@media (max-width: 768px) {
+    .testimonials { padding: 2.5rem 1rem; }
+    .testimonials-container { padding: 0 .5rem; }
 }
